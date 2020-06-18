@@ -386,6 +386,10 @@
 		color: white;
 	}
 
+	.domaines .vanessa-landais, .domaines .julie-lehut {
+		width: 100%;
+	}
+
 	.postulation {
 		height: auto;
 		background-size: contain;
