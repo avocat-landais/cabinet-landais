@@ -1,0 +1,556 @@
+html, body {
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	background-color: black;
+	color: rgb(0, 0, 0);
+	font-family: "Gotham";
+	transition: background-color 0.3s;
+}
+
+#cookie-warning {
+	position: fixed;
+	text-align: center;
+	padding: 10px;
+	bottom: 0px;
+	left: 0;
+	height: 30px;
+	width: 100%;
+	background-color: rgba(0, 0, 0, 0.8);
+	color: white;
+	font-size: 12px;
+}
+
+.container.main {
+	position: relative;
+	width: 1140px;
+	overflow: hidden;
+	margin: auto;
+}
+
+.fc-today {
+	background-color: rgba(255, 255, 255, 0.4) !important;
+}
+/**************************\
+**         GLOBS          **
+\**************************/
+
+button {
+	border: none;
+	outline: none;
+}
+#domaines, #contact { /*anchors*/
+	position: relative;
+	width: 1px;
+	height: 1px;
+}
+#domaines {
+	top: -130px;
+}
+#contact {
+	top: -400px;
+}
+
+h1 {
+	font-size: 42px;
+}
+
+.button, button {
+	display: block;
+	border-radius: 4px;
+	cursor: pointer;
+	background-color: rgba(250, 87, 70, 1);
+	box-shadow: 2px 2px 2px rgba(250, 87, 70, 1);
+	padding: 2px;
+	position: absolute;
+	line-height: 35px;
+	height: 35px;
+	font-size: 10px;
+	font-style: normal;
+	font-weight: bold;
+	text-align: center;
+	text-decoration: none;
+	text-transform: uppercase;
+	color: black;
+	width: 180px;
+}
+
+.help {
+	font-weight: 100;
+	font-size: 12px;
+	text-transform: none;
+}
+
+
+/**************************\
+**       INVISIBLES       **
+\**************************/
+
+
+#left-menu {
+	position: fixed;
+	z-index: 1000;
+	margin-left: -330px;
+	width: 330px;
+	height: 100%;
+	background: rgba(250, 87, 70, 1);
+	opacity: 0;
+	overflow-y: scroll;
+}
+	#left-menu .close-icon {
+		position: absolute;
+		top: 35px;
+		right: 20px;
+		margin-left: 28px;
+		font-size: 30px;
+		cursor: pointer;
+		color: rgb(236, 236, 236);
+	}
+	#left-menu li {
+		text-align: justify;
+		margin-top: 12px;
+		margin-left: 10px;
+		font-weight: 100;
+	}
+	#left-menu li ul li {
+		margin-left: 30px;
+		font-weight: normal;
+	}
+	#left-menu li ul li a {
+		color: black;
+	}
+	#left-menu li a {
+		text-decoration: none;
+		color: rgb(236, 236, 236);
+	}
+
+#overlay {
+	display: none;
+	opacity: 0;
+	position: fixed;
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	background: rgba(0, 0, 0, 0.8);
+	z-index: 2000;
+}
+	#overlay-close-icon {
+		position: absolute;
+		right: 15px;
+		top: 20px;
+		font-size: 30px;
+		cursor: pointer;
+	}
+	#overlay form {
+		color: rgb(236, 236, 236);
+		background-color: rgba(250, 87, 70, 1);
+		position: relative;
+		margin: auto;
+		padding: 20px;
+		padding-top: 30px;
+		width: 850px;
+		height: 800px;
+	}
+	#overlay form p {
+		margin-top: 30px;
+		padding: 0;
+		position: relative;
+		width: 100%;
+		font-size: 10px;
+		line-height: 10px;
+		color: white;;
+	}
+
+	#overlay form h2 {
+		font-size: 20px;
+		text-align: left;
+		text-transform: uppercase;
+		font-weight: 100;
+		margin-bottom: 30px;
+	}
+	#overlay form h3 {
+		margin: auto;
+		width: 600px;
+		position: relative;
+		margin-bottom: 20px;
+		font-weight: 100;
+		font-size: 15px;
+	}
+	#overlay form .control {
+		position: relative;
+		margin: auto;
+		margin-top: 25px;
+		display: block;
+		width: 600px;
+		font-size: 14px;
+		text-transform: uppercase;
+		font-weight: 100;
+	}
+
+	#overlay form input {
+		position: absolute;
+		margin-top: -12px;
+		left: 400px;
+		font-size: 14px;
+		height: 30px;
+		width: 190px;
+		padding-left: 5px;
+		padding-right: 5px;
+	}
+	#overlay form textarea {
+		margin-top: 30px;
+		display: block;
+		width: 100%;
+		height: 170px;
+		resize: none;
+		font-size: 14px;
+	}
+	#confirm {
+		position: relative;
+		margin: auto;
+		margin-top: 30px;
+		background: white;
+		color: black;
+	}
+
+/**************************\
+**         HEADER         **
+\**************************/
+
+header {
+	width: inherit;
+	position: fixed;
+	-webkit-transform: translateZ(0);
+	top: 0px;
+	height: 140px;
+	color: rgb(236, 236, 236);
+	background: rgb(0, 0, 0);
+	z-index: 999;
+}
+
+.burger-container, .menu {
+	height: 70px;
+	line-height: 70px;
+}
+
+.burger-icon {
+	line-height: 100px;
+	margin-left: 28px;
+	font-size: 28px;
+	width: 30px;
+	cursor: pointer;
+}
+
+.mobile-contact {
+	display: none;
+}
+.menu a {
+	text-decoration: none;
+	color: inherit;
+}
+
+.menu > ul {
+	margin-left: 250px;
+}
+	.menu > ul > li {
+		box-sizing: padding-box;
+		display: inline-block;
+		margin-left: 28px;
+		font-weight: normal;
+		font-size: 14px;
+		cursor: pointer;
+		line-height: 23px;
+	}
+		.menu > ul > li:hover {
+			border-bottom: 2px solid rgb(236, 236, 236);
+		}
+
+
+/**************************\
+**        CONTENT         **
+\**************************/
+.content {
+	z-index: 1;
+	margin-top: 140px;
+	background-image: -webkit-linear-gradient(270deg, #F5CA8F 0%, rgba(250, 87, 70, 1) 100%);
+	background-image: -moz-linear-gradient(270deg, #F5CA8F 0%, rgba(250, 87, 70, 1) 100%);
+	background-image: -ms-linear-gradient(270deg, #F5CA8F 0%, rgba(250, 87, 70, 1) 100%);
+	background-blend-mode: multiply;
+}
+
+.presentation {
+	height: 430px;
+	background-image: url(./img/versailles2.png);
+	background-repeat: no-repeat;
+}
+	.presentation > h1 {
+		position: relative;
+		font-weight: normal;
+		top: 90px;
+		line-height: 60px;
+		text-align: center;
+	}
+	.presentation > h2 {
+		color: rgba(90, 90, 90, 0.9);
+		font-size: 20px;
+		font-weight: normal;
+		text-align: center;
+		margin-top: 100px;
+	}
+	.presentation > a {
+		position: relative;
+		margin: auto;
+		font-weight: normal;
+		margin-top: 0px;
+		transition: all 0.3s;
+		background-color: rgba(250, 87, 70, 1);
+		color: white;
+		box-shadow: none;
+	}
+	.presentation > a:hover {
+		background-color: rgba(250, 87, 70, 1);
+	}
+	.presentation .button {
+		position: relative;
+		display: block;
+		margin: auto;
+		margin-top: 30px;
+	}
+
+.rappel {
+	height: 283px;
+	position: relative;
+	margin: auto;
+	width: 800px;
+}
+	.rappel ul {
+		margin-top: 40px;
+	}
+	.rappel li {
+		vertical-align: top;
+		display: inline-block;
+		font-weight: 100;
+		font-family: Helvetica;
+		width: 178px;
+		font-size: 14px;
+	}
+	.rappel li:nth-child(2) {
+		margin-left: 132px;
+	}
+	.rappel li:last-of-type {
+		position: absolute;
+		right: 0px;
+	}
+	.rappel h3 {
+		font-weight: bold;
+	}
+	.rappel p {
+		margin-top: 20px;
+	}
+	.rappel li a {
+		position: relative;
+		top: 10px;
+		color: white;
+		font-size: 13px;
+		text-decoration: none;
+		font-style: italic;
+		font-weight: bold;
+	}
+	.rappel .button {
+		position: relative;
+		margin: auto;
+		font-weight: normal;
+		background: rgba(250, 87, 70, 1);
+		margin-top: 50px;
+		transition: all 0.3s;
+		color: white;
+	}
+	.rappel .button:hover {
+		background: rgba(250, 87, 70, 1);
+	}
+
+.domaines {
+	position: relative;
+	height: auto;
+	background-size: 100%;
+	background-repeat: no-repeat;
+	top: -70px;
+}
+	.domaines h2 {
+		position: relative;
+		margin-top:30px;
+		margin-bottom: 70px;
+		text-align: center;
+		color: black;
+		font-family: Helvetica;
+		font-weight: 100;
+		font-size: 17px;
+		text-transform: uppercase;
+	}
+	.domaines ul {
+		text-align: center;
+		margin-top: 10px;
+	}
+	.domaines .top-row li {
+		margin-left: 60px;
+		vertical-align: top;
+		display: inline-block;
+		font-weight: 100;
+		font-family: Helvetica;
+		width: calc(33% - 140px);
+		font-size: 14px;
+	}
+	.domaines .bottom-row {
+		margin-top: 110px;
+	}
+	.domaines .bottom-row li {
+		margin-left: 60px;
+		vertical-align: top;
+		display: inline-block;
+		font-weight: 100;
+		font-family: Helvetica;
+		width: calc(25% - 80px);
+		font-size: 13px;
+	}
+	.domaines h3 {
+		font-weight: bold;
+		margin-top: 17px;
+	}
+	.domaines p {
+		margin-top: 20px;
+		text-align: left;
+	}
+	.domaines li a {
+		position: relative;
+		top: 20px;
+		color: rgb(236, 236, 236);
+		font-size: 13px;
+		text-decoration: none;
+		font-style: italic;
+		font-weight: bold;
+	}
+	.domaines .bottom-row li a {
+		color: rgb(236, 236, 236);
+	}
+
+	.domaines .vanessa-landais {
+		margin-top: 30px;
+		display: inline-block;
+		width: 50%;
+		padding: 30px 50px 50px 50px;
+		vertical-align: top;
+		font-size: 17px;
+		font-weight: 300;
+		line-height: 20px;
+	}
+	.domaines .julie-lehut {
+		margin-top: 30px;
+		display: inline-block;
+		width: 49%;
+		padding: 30px;
+		vertical-align: top;
+		font-size: 14px;
+		font-weight: 100;
+		line-height: 18px;
+	}
+	.domaines .both {
+		padding: 0 50px 0 50px;
+	}
+	.domaines strong {
+		font-weight: 400;
+	}
+
+.postulation {
+	height: 570px;
+	background-image: url(./img/fronton.png);
+	background-repeat: no-repeat;
+	font-size: 13px;
+	top: -70px;
+}
+	.postulation a {
+		text-decoration: none;
+		color: rgba(250, 87, 70, 1);
+		font-weight: bold;
+	}
+	.postulation > .container {
+		background-color: white;
+		position: relative;
+		margin: auto;
+		width: 800px;
+		height: 477px;
+		top: 120px;
+	}
+	.postulation > .container > h2 {
+		font-family: Helvetica;
+		height: 110px;
+		line-height: 110px;
+		font-weight: 100;
+		font-size: 17px;
+		color: rgba(250, 87, 70, 1);
+		font-weight: bold;
+		text-align: center;
+		text-transform: uppercase;
+	}
+	.postulation > .container > div {
+		display: inline-block;
+		position: relative;
+		vertical-align: top;
+		width: calc(50% - 5px);
+		padding: 20px;
+	}
+	.postulation > .container > div > h3 {
+		display: inline-block;
+		position: relative;
+		vertical-align: top;
+		margin-bottom: 10px;
+		font-size: 15px;
+	}
+	.postulation > .container > div > p {
+		font-weight: 100;
+		margin-bottom: 15px;
+		font-size: 14px;
+	}
+
+	footer.contact {
+		height: 450px;
+		width: 100%;
+		margin: 0;
+		margin-top: 120px;
+		padding-bottom: 30px;
+	}
+		footer.contact a, footer.contact strong {
+			text-decoration: none;
+			font-style: italic;
+			font-weight: normal;
+			color: white;
+		}
+
+		footer.contact iframe {
+			display: inline-block;
+			vertical-align: middle;
+			position: relative;
+			left:20px;
+			top:0;
+			width: 45%;
+			height: 300px;
+		}
+
+		footer.contact div {
+			display: inline-block;
+			vertical-align: top;
+			position: relative;
+			margin: 60px 42px;
+			top: 0;
+			text-align: left;
+			color: rgb(236, 236, 236);
+			font-size: 14px;
+			font-weight: 100;
+			line-height: 18px;
+		}
+		footer.contact h3 {
+			font-weight: bold;
+			font-size: 14px;
+			text-transform: uppercase;
+			margin-bottom: 10px;
+		}

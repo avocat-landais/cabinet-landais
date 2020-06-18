@@ -1,0 +1,78 @@
+/* These css rules overwrites the main.css ones for simple page content */
+
+.content {
+	margin-top: 140px;
+	background-image: -webkit-linear-gradient(270deg, #F5CA8F 0%, rgba(250, 87, 70, 1) 100%);
+	background-image: -moz-linear-gradient(270deg, #F5CA8F 0%, rgba(250, 87, 70, 1) 100%);
+	background-image: -ms-linear-gradient(270deg, #F5CA8F 0%, rgba(250, 87, 70, 1) 100%);
+	padding: 0px;
+}
+
+.description {
+	position: relative;
+	height: auto;
+	width: 830px;
+	margin: auto;
+	margin-top: -200px;
+	color: black;
+	text-align: left;
+	line-height: 20px;
+	padding: 30px;
+	font-weight: 100;
+	background: rgb(255, 250, 248);
+}
+
+.description p {
+	margin-bottom: 30px;
+}
+
+strong {
+	font-weight: bold;
+}
+
+a {
+	color: rgb(30, 0, 0);
+}
+
+footer {
+	background: transparent;
+	height: 100px;
+}
+
+.menu ul {
+	position: absolute;
+	right: 30px;
+	width: 100px;
+	margin-left: 0px;
+}
+
+#start { /*anchors*/
+	position:relative;
+	width: 1px;
+	height: 1px;
+	top: -140px;
+}
+
+@media (max-width: 768px) {
+	.content {
+		margin-top: 40px;
+		padding: 0px;
+	}
+
+	.description {
+		position: relative;
+		top: -170px;
+		width: 100%;
+		margin: auto;
+		margin-top: 0px;
+	}
+
+	footer {
+		margin-top: -170px !important;
+	}
+
+	footer iframe {
+		left: 0px !important;
+		width: 100%;
+	}
+}

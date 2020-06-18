@@ -1,0 +1,24 @@
+{
+  "name": "avocat-landais.com",
+  "authors": [
+    "grebett <gregory.betton@gmail.com>"
+  ],
+  "description": "source du site web avocat-landais.com",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "homepage": "http://avocat-landais.com",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^2.2.1",
+    "moment": "^2.11.2",
+    "fullcalendar": "^2.6.1"
+  }
+}
