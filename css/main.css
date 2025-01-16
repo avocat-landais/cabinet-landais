@@ -55,6 +55,18 @@ h1 {
 	font-size: 42px;
 }
 
+h2 {
+	font-size: 1.5em;
+	font-weight: bold;
+	margin: 1em 0;
+}
+
+h3 {
+	font-size: 1.3em;
+	font-weight: bold;
+	margin: 1em 0;
+}
+
 .button, button {
 	display: block;
 	border-radius: 4px;
@@ -81,7 +93,15 @@ h1 {
 	text-transform: none;
 }
 
+ul li {
+	list-style: circle;
+	margin: 10px;
+}
 
+em {
+	font-style: italic;
+	font-weight: 300;
+}
 /**************************\
 **       INVISIBLES       **
 \**************************/
@@ -281,7 +301,7 @@ header {
 
 .presentation {
 	height: 430px;
-	background-image: url(./img/versailles2.png);
+	background-image: url(../img/versailles2.png);
 	background-repeat: no-repeat;
 }
 	.presentation > h1 {
